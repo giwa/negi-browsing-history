@@ -1,0 +1,17 @@
+#include "SearchClient.H"
+
+SearchClient::SearchClient(){
+}
+
+int SearchClient::Variety(result *res){
+	string str, buf;
+	for(result::const_iterator it = res->begin(); it != res->end(); it++){
+		str = it[3].as( string() );
+		buf = str[1];
+		if(buf == "/"){
+			client[it[0].as( string() )] = "";
+		}
+	}
+
+	return 0;
+}

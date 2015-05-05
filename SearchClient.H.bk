@@ -1,0 +1,15 @@
+#pragma once
+#include "Include.H"
+
+using namespace pqxx;
+
+class SearchClient{
+	private:
+//		map<string, string> src_ip;
+
+	public:
+		SearchClient();
+		int Variety(result *res);
+
+		map<string, string> client;
+};
